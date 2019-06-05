@@ -1,0 +1,32 @@
+{
+  "name": "aniketbatabyal.github.io",
+  "version": "1.0.0",
+  "description": "My own personal portfolio website, because everyone has it.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anarchymonkey/aniketbatabyal.github.io.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "website"
+  ],
+  "author": "Aniket Batabyal (anarchymonkey)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anarchymonkey/aniketbatabyal.github.io/issues"
+  },
+  "homepage": "https://github.com/anarchymonkey/aniketbatabyal.github.io#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.5.12"
+  }
+}
