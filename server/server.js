@@ -1,15 +1,14 @@
-const express = require('express'),
-      server = require('http2').createSecureServer();
-      module.exports = function runit(port){
-      server.listen(port,(err)=>{
-          try{
-              if(err){
-                  throw new err;
-              }
-              console.log(`successfully running on port ${port}`);
-          }
-          catch(err){
-              console.log('there is an error');
-          }
-      });
-    }
+let app = require('../app'),
+    http = require('http');
+    let port = process.env.PORT || 3000;
+    app.set('port',port);
+    http.createServer(app).listen(app.get('port'),(err)=>{
+        try{
+            if(err){
+                throw new err;
+            }
+            console.log(`server started on port ${port}`);
+        }catch(err){
+            console.log('there is an error');
+        }
+    });

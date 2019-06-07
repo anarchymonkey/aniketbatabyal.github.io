@@ -2,12 +2,12 @@
 // #                                                     # //
 
 const   express = require('express'),
-        server = require('./server/server'),
         db = require('./server/db'),
         bodyParser = require('body-parser'),
         session = require('express-session'),
-        methodOverride = require('method-override');
-        port = 3000 || process.env.PORT;
+        methodOverride = require('method-override'),
+        port = 3000 || process.env.PORT,
+        indexRoute = require('./controllers/index');
 
 let app = express();
 
@@ -23,4 +23,9 @@ app.use(session({
 }));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride());
-server(port);
+
+/*  # Routings #    */
+
+app.use(indexRoute);
+/*  #   Server listeners  # */
+module.exports = app;
