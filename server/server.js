@@ -1,5 +1,6 @@
 let app = require('../app'),
-    http = require('http');
+    http = require('http'),
+    fs = require('fs');
     let port = process.env.PORT || 3000;
     app.set('port',port);
     http.createServer(app).listen(app.get('port'),(err)=>{
@@ -9,6 +10,6 @@ let app = require('../app'),
             }
             console.log(`server started on port ${port}`);
         }catch(err){
-            console.log('there is an error');
+            let storeErrorLogs = fs.writeFile('error.txt',err);
         }
     });

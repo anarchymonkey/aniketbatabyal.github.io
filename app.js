@@ -7,7 +7,8 @@ const   express = require('express'),
         session = require('express-session'),
         methodOverride = require('method-override'),
         port = 3000 || process.env.PORT,
-        indexRoute = require('./controllers/index');
+        indexRoute = require('./controllers/index'),
+        morgan = require('morgan');
 
 let app = express();
 
@@ -21,8 +22,10 @@ app.use(session({
     saveUninitialized : false,
     resave : false
 }));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride());
+app.use(morgan('dev'));
 
 /*  # Routings #    */
 
