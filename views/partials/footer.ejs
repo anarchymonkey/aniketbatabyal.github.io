@@ -1,0 +1,14 @@
+<script>
+    function readyAllThings(){
+        let menu = document.querySelector('.navbar');
+        console.log(menu);
+        let hamburgerOpen = document.getElementById('hamburger-open-onClick');
+            hamburgerOpen.addEventListener('click',()=>{
+                menu.style.display = 'block';
+                hamburgerOpen.style.display = 'none';
+            });
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+}
+.navbar{
+    display: none;
+    padding: 10px;
+    width: calc(100%-10px);
+    height: 100%;
+    background : rgb(49, 45, 45);
+    overflow: hidden;
+    text-align: center;
+}
+.navbar li{
+    display: inline;
+}
+.navbar li a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px;
+}
+.navbar li a:hover{
+    background: red;
+}
+.navbar li:nth-child(1) a:active{
+    color:red;
+}
+
+#hamburger-open-onClick{
+    display: inline;
+    width: calc(100%-4px);
+    padding: 4px;
+    margin: 2px;
+    width: 7vh;
+    float: right;
+}
+
+#hamburger-close-onClick{
+    color :white;
+    display: inline;
+    float : right;
+    font-size : 30px;
+}
+
+#hamburger-close-onClick li a:hover{
+    background: auto;
+}

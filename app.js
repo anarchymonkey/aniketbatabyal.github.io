@@ -6,14 +6,13 @@ const   express = require('express'),
         bodyParser = require('body-parser'),
         session = require('express-session'),
         methodOverride = require('method-override'),
-        port = 3000 || process.env.PORT,
         indexRoute = require('./controllers/index'),
         morgan = require('morgan');
 
-let app = express();
+        let app = express();
 
 app.set('view engine','ejs');
-app.use(express.static(__dirname + 'public'));
+app.use(express.static('public'));
 app.use(session({
     cookie:{
         maxAge : 10000
