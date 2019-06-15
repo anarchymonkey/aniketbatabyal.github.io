@@ -1,48 +1,174 @@
-body{
+html,body{
+    width: 100%;
+    height: calc(100vh - 40px);
     margin: 0 auto;
     padding: 0;
+    scroll-behavior: smooth;
+    background: rgb(225, 228, 231);
+}
+.container {
+    display: inline;
 }
 .navbar{
     display: none;
     padding: 10px;
-    width: calc(100%-10px);
-    height: 100%;
+    width: calc(100% - 10px);
+    height: calc(100vh - 20px);
     background : rgb(49, 45, 45);
-    overflow: hidden;
     text-align: center;
+    transition: 0.5s;
+    animation: navbarAnimate 1.5s ease-in;
 }
-.navbar li{
-    display: inline;
+
+ul{
+    list-style-type: none;
+    margin: 10% auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+@keyframes navbarAnimate{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
 }
 .navbar li a{
     color: whitesmoke;
     text-decoration: none;
     font-size: 30px;
     padding: 20px;
+    transition: 1s;
+    animation: slideThis 3s ease-in;
+}
+
+@keyframes slideThis{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 .navbar li a:hover{
-    background: red;
+    background: rgb(105, 31, 31);
 }
-.navbar li:nth-child(1) a:active{
-    color:red;
-}
-
 #hamburger-open-onClick{
-    display: inline;
-    width: calc(100%-4px);
-    padding: 4px;
-    margin: 2px;
-    width: 7vh;
-    float: right;
+    padding: 10px;
+    cursor: pointer;
+    width: calc(100% - 2px);
+    float: left;
+    font-size: 30px;
 }
-
 #hamburger-close-onClick{
-    color :white;
-    display: inline;
-    float : right;
+    transition: 2s ease-in;
+    cursor: pointer;
+    padding:6px;
+    margin: 20px;
+    display: none;
+    color: auto;
+    color: rgb(121, 116, 116);
+    float : left;
     font-size : 30px;
 }
-
+#hamburger{
+    font-size: 30px;
+}
 #hamburger-close-onClick li a:hover{
-    background: auto;
+    background: red;
+}
+
+
+.logo{
+    margin-top : 20px;
+    clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+    text-align: center;
+    height: 90%;;
+    background: rgb(121, 119, 115);
+}
+.devThings{
+    
+    text-align: center;
+}
+
+#developer-name{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+}
+#face{
+    position: relative;
+    width: 15%;
+    border-radius: 50%;
+    filter: blur(0.5px) drop-shadow(5px 5px 8px grey) opacity(90%);
+}
+#face:hover{
+    animation: slideDown 0.5s ease-in-out;
+    filter: blur(2px) drop-shadow(8px 8px 10px grey) opacity(20%);
+}
+@keyframes slideDown{
+
+    from{
+
+        filter: blur(0.5px) drop-shadow(5px 5px 8px grey) opacity(60%);
+
+    }
+    to{
+        transition: all ease-in-out;
+        filter: blur(0.5px) drop-shadow(5px 5px 8px grey) opacity(20%);
+
+    }
+
+}
+#github{
+    font-size: 50px;
+    padding: 10px;
+    opacity: 0.4;
+}
+#facebook{
+    padding: 10px;
+    font-size : 50px;  
+    opacity: 0.4;
+}
+
+#github:hover{
+    opacity: 0.9;
+}
+#facebook:hover{
+    opacity: 0.9;
+}
+#motivation{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#website{
+    font-size:20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+}
+#email{
+    text-decoration: none;
+}
+
+#techous{
+    display: inline;
+    margin-right: 50px;
+    padding: 30px 20px;
+    width: 60%;
+    height: 30%;
+}
+#description{
+    font-size : 20px;
+}
+.btn{
+    width : 15%;
+    padding : 10px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 2ch;
+    background: linear-gradient(to right, #ed213a, #93291e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: antiquewhite;
+    box-sizing: border-box;
+    border: 1px solid black;
+
+
 }

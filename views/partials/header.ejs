@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index Page</title>
-    <link rel="stylesheet" type="text/css" href="/css/index.css">  
+    <link rel="stylesheet" type="text/css" href="/css/index.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 <body>
-        <img id="hamburger-open-onClick" onClick='readyAllThings()' src="/img/hamb2.svg" alt="hamburger menu">
+        <div class="container">
+        
+        <a class="fa fa-times-circle" id="hamburger-close-onClick" onclick="closeAllThings()"></a>
     <nav class="navbar">
+        <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Skillset</a></li>
-            <li id="hamburger-close-onClick"><a href="#"">X</li>
-
-
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
+</div>
